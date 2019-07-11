@@ -8,13 +8,13 @@ import production from "./Icons/production.svg";
 import sampling from "./Icons/sampling.svg";
 import settings from "./Icons/settings.png";
 
-import Settings from "./Settings";
-import Production from "./Production";
-import Sampling from "./Sampling";
-import Account from "./Account";
-import Inbox from "./Inbox";
-import Collections from "./Collections";
-import Home from "./Home";
+import Settings from "./Links/Settings";
+import Production from "./Links/Production";
+import Sampling from "./Links/Sampling";
+import Account from "./Links/Account";
+import Inbox from "./Links/Inbox";
+import Collections from "./Links/Collections";
+import Home from "./Links/Home";
 
 const routes = [
   {
@@ -62,10 +62,10 @@ function Sidebar() {
     <Router>
       <div className="sidebar-Container">
         <ul className="sidebar-List">
-          <li style={{ fontSize: "1rem", fontWeight: "bold", marginTop: "0" }}>
+          <li style={{ fontSize: "1rem", fontWeight: "bold", marginTop: "0", paddingBottom:'0.5rem'  }}>
             Loco Fast
           </li>
-          <Link style={{ textDecoration: "none", color: "#6e7880" }} to="/">
+          <Link style={{ textDecoration: "none", color: "#6e7880" }} to="/collections">
             {" "}
             <li>
               <img src={collections} />
