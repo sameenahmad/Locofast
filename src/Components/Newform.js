@@ -83,7 +83,7 @@ class Newform extends Component {
           <img src={this.state.img} id="bannerImg" />
         </div>
         <div className="input-Fields">
-          <p id="errorMessage" style={{color:'red', marginBottom:'1rem'}} />
+          <p id="errorMessage" style={{ color: "red", marginBottom: "1rem" }} />
           <form>
             <label>Design Name*</label>
             <br />

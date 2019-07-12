@@ -19,7 +19,7 @@ class Sideshutter extends Component {
   }
 
   handleClick = item => {
-    this.setState({ showComponent: true, item: item });
+    this.setState({ showComponent: true,showNewForm: false, item: item });
   };
   addDesign = e => {
     this.setState({ showNewForm: true });
