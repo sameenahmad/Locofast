@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ls from "local-storage";
-class Designform extends Component {
+class Newform extends Component {
   constructor(props) {
     super(props);
     const getProducts = ls.get("products");
@@ -68,11 +68,7 @@ class Designform extends Component {
     return (
       <div className="product-Form">
         <div className="product-Image">
-          {/* <img src={this.state.img} id="bannerImg" /> */}
-          <img
-            src={this.props.item[4].img}
-            alt="" style={{width:'300px', height:'300px'}}
-          />
+          <img src={this.state.img} id="bannerImg" />
         </div>
         <div className="input-Fields">
           <form>
@@ -80,7 +76,7 @@ class Designform extends Component {
             <br />
             <input
               type="text"
-              value={this.props.item[0].designName}
+              value={this.state.designName}
               size="50"
               name="designName"
               onChange={this.handleChange}
@@ -90,7 +86,7 @@ class Designform extends Component {
             <br />
             <input
               type="text"
-              value={this.props.item[1].designId}
+              value={this.state.designId}
               name="designId"
               size="20"
               onChange={this.handleChange}
@@ -111,7 +107,7 @@ class Designform extends Component {
               <option value="Kids">Kids</option>I
               <option value="Women">Women</option>
               <option value="Decor">Decor</option>
-              <option defaultValue={this.props.item[2].designCategory} />
+              <option defaultValue={this.state.designCategory} />
             </select>
             <select
               name="designType"
@@ -127,7 +123,7 @@ class Designform extends Component {
               <option value="Ethnic">Ethnic</option>
               <option value="Footwear">Footwear</option>
               <option value="Watch">Watches and Wearables</option>
-              <option defaultValue={this.props.item[3].designType} />
+              <option defaultValue={this.state.designType} />
             </select>
             <input
               type="file"
@@ -150,4 +146,4 @@ class Designform extends Component {
   }
 }
 
-export default Designform;
+export default Newform;

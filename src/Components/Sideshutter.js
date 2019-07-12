@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import arrow from "./Icons/arrow.svg";
 import add from "./Icons/add.svg";
 import Productdetails from "./Productdetails";
-import Collections from "./Links/Collections";
 import Designform from "./Designform";
+import Newform from './Newform'
 import ls from "local-storage";
 
 class Sideshutter extends Component {
@@ -13,14 +13,18 @@ class Sideshutter extends Component {
     this.state = {
       products: getProducts || [],
       showComponent: false,
+      showNewForm: false,
       item: []
     };
   }
 
   handleClick = item => {
-    console.log("Item was clicked", item);
     this.setState({ showComponent: true, item: item });
   };
+  addDesign = e => {
+    this.setState({ showNewForm: true });
+  };
+
   render() {
     return (
       <div className="shutter-Container">
@@ -56,13 +60,18 @@ class Sideshutter extends Component {
               justifyContent: "space-between"
             }}
           >
-            Add new Design <img src={add} onClick={this.handleClick} />
+            Add new Design <img src={add} onClick={this.addDesign} />
           </p>
         </div>
         {this.state.showComponent ? (
           <div className="show-Product-Details">
             <Productdetails item={this.state.item} />
             <Designform item={this.state.item} />
+          </div>
+        ) : null}
+        {this.state.showNewForm ? (
+          <div className="show-Product-Details">
+            <Newform />
           </div>
         ) : null}
       </div>
