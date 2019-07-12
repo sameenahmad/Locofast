@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Locofast/static/css/main.b8d9e34e.chunk.css",
+    "main.js": "/Locofast/static/js/main.baf01742.chunk.js",
+    "main.js.map": "/Locofast/static/js/main.baf01742.chunk.js.map",
+    "runtime~main.js": "/Locofast/static/js/runtime~main.9031862f.js",
+    "runtime~main.js.map": "/Locofast/static/js/runtime~main.9031862f.js.map",
+    "static/js/2.76a6f6ae.chunk.js": "/Locofast/static/js/2.76a6f6ae.chunk.js",
+    "static/js/2.76a6f6ae.chunk.js.map": "/Locofast/static/js/2.76a6f6ae.chunk.js.map",
+    "index.html": "/Locofast/index.html",
+    "precache-manifest.46932afe3c8aea84f39b8bbfecad0620.js": "/Locofast/precache-manifest.46932afe3c8aea84f39b8bbfecad0620.js",
+    "service-worker.js": "/Locofast/service-worker.js",
+    "static/css/main.b8d9e34e.chunk.css.map": "/Locofast/static/css/main.b8d9e34e.chunk.css.map",
+    "static/media/account.svg": "/Locofast/static/media/account.0ccc3389.svg",
+    "static/media/add.svg": "/Locofast/static/media/add.b5ce6eb5.svg",
+    "static/media/arrow.svg": "/Locofast/static/media/arrow.1f6abe65.svg",
+    "static/media/collections.svg": "/Locofast/static/media/collections.a76271e7.svg",
+    "static/media/messages.svg": "/Locofast/static/media/messages.e9eed4c5.svg",
+    "static/media/production.svg": "/Locofast/static/media/production.a06833fd.svg",
+    "static/media/sampling.svg": "/Locofast/static/media/sampling.4911729d.svg",
+    "static/media/search.svg": "/Locofast/static/media/search.33a31a95.svg"
+  }
+}
