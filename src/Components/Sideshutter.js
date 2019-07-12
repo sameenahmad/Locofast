@@ -22,7 +22,7 @@ class Sideshutter extends Component {
     this.setState({ showComponent: true,showNewForm: false, item: item });
   };
   addDesign = e => {
-    this.setState({ showNewForm: true });
+    this.setState({ showNewForm: true, showComponent:false });
   };
 
   render() {

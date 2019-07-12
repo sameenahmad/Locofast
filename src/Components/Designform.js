@@ -68,10 +68,9 @@ class Designform extends Component {
     return (
       <div className="product-Form">
         <div className="product-Image">
-          {/* <img src={this.state.img} id="bannerImg" /> */}
           <img
             src={this.props.item[4].img}
-            alt="" style={{width:'300px', height:'300px'}}
+            alt="" className='bannerImg'
           />
         </div>
         <div className="input-Fields">
