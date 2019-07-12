@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  NavLink,
+  Link
+} from "react-router-dom";
 
 import account from "./Icons/account.svg";
 import collections from "./Icons/collections.svg";
@@ -57,15 +62,28 @@ const routes = [
   }
 ];
 
+
+
 function Sidebar() {
   return (
     <Router>
       <div className="sidebar-Container">
         <ul className="sidebar-List">
-          <li style={{ fontSize: "1rem", fontWeight: "bold", marginTop: "0", paddingBottom:'0.5rem'  }}>
+          <li
+            style={{
+              fontSize: "1rem",
+              fontWeight: "bold",
+              marginTop: "0",
+              paddingBottom: "0.5rem"
+            }}
+          >
             Loco Fast
           </li>
-          <Link style={{ textDecoration: "none", color: "#6e7880" }} to="/collections">
+          <Link
+            style={{ textDecoration: "none", color: "#6e7880" }}
+            to="/collections"
+            activeClassName="active"
+          >
             {" "}
             <li>
               <img src={collections} />
@@ -73,16 +91,16 @@ function Sidebar() {
             </li>
           </Link>
 
-          <Link
+          <NavLink
             style={{ textDecoration: "none", color: "#6e7880" }}
-            to="/sampling"
+             to="/sampling"
           >
             {" "}
             <li>
               <img src={sampling} />
               <p> SAMPLING</p>
             </li>
-          </Link>
+          </NavLink>
 
           <Link
             style={{ textDecoration: "none", color: "#6e7880" }}
@@ -94,41 +112,29 @@ function Sidebar() {
             </li>
           </Link>
 
-          <Link
-            style={{ textDecoration: "none" }}
-            to="/inbox"
-          >
+          <Link style={{ textDecoration: "none" }} to="/inbox">
             <li>
-              <img src={messages}/>
+              <img src={messages} />
               <p> INBOX</p>
             </li>
           </Link>
         </ul>
         <ul className="sidebar-List">
-          <Link
-            style={{ textDecoration: "none" }}
-            to="/account"
-          >
+          <Link style={{ textDecoration: "none" }} to="/account">
             <li>
               <img src={account} />
               <p> ACCOUNT</p>
             </li>
           </Link>
 
-          <Link
-            style={{ textDecoration: "none"}}
-            to="/settings"
-          >
+          <Link style={{ textDecoration: "none" }} to="/settings">
             <li>
               {" "}
-              <img src={settings} style={{ width:'20px', height:'20px'}} />
+              <img src={settings} style={{ width: "20px", height: "20px" }} />
               <p> SETTINGS</p>
             </li>
           </Link>
-          <Link
-            style={{ textDecoration: "none"}}
-            to="/logout"
-          >
+          <Link style={{ textDecoration: "none" }} to="/logout">
             <li style={{ fontSize: "0.8rem" }}>Logout</li>
           </Link>
         </ul>

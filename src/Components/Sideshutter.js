@@ -3,7 +3,7 @@ import arrow from "./Icons/arrow.svg";
 import add from "./Icons/add.svg";
 import Productdetails from "./Productdetails";
 import Designform from "./Designform";
-import Newform from './Newform'
+import Newform from "./Newform";
 import ls from "local-storage";
 
 class Sideshutter extends Component {
@@ -13,16 +13,17 @@ class Sideshutter extends Component {
     this.state = {
       products: getProducts || [],
       showComponent: false,
-      showNewForm: false,
-      item: []
+      showNewForm: true,
+      item: [],
+      getColor: false
     };
   }
 
   handleClick = item => {
-    this.setState({ showComponent: true,showNewForm: false, item: item });
+    this.setState({ showComponent: true, showNewForm: false, item: item });
   };
   addDesign = e => {
-    this.setState({ showNewForm: true, showComponent:false });
+    this.setState({ showNewForm: true, showComponent: false });
   };
 
   render() {

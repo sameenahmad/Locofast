@@ -96,7 +96,7 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  padding-top: 2rem;
+  padding-top: 1rem;
   padding-left: 2rem;
   background-color: white;
 }
@@ -170,22 +170,25 @@
 .input-Fields {
   display: flex;
   flex-direction: column;
-  min-height: 60vh;
-  width: 70%;
-  padding-top: 2rem;
-  padding-left: 2rem;
+  justify-content: flex-end;
+  min-height: 50vh;
+  width: 50%;
+  padding-top: 1.5rem;
+  padding-left: 0.5rem;
   font-family: "Nunito";
   font-size: 0.8rem;
   color: #c1c1c4;
   padding-bottom: 2rem;
   margin-left: 1rem;
+
 }
+
 .product-Image {
   display: flex;
   flex-direction: column;
   min-height: 50vh;
   width: 40%;
-  padding-top: 3rem;
+  padding-top: 2rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   align-items: center;
@@ -193,12 +196,11 @@
 .input-Fields input {
   width: 80%;
   padding: 0.5rem 0rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 .input-Fields label {
   color: #c1c1c4;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+
 }
 #submitBtn {
   width: 20%;
@@ -207,25 +209,34 @@
 .bannerImg {
   display: block;
   width: 300px;
-  height:300px
+  height: 300px;
 }
 
-@media (min-width:801px)  { 
-.bannerImg{
-width:150px;
-height: 150px;
-}    
-#submitBtn {
-  width: 30%;
+.charsCount {
+  display: flex;
+  width: 80%;
+  justify-content: flex-end;
+  color: #c1c1c4;
+  font-size: 0.6rem;
 }
-.input-Fields{
-  margin-left: 1rem;
-}
-.input-Fields input
+.getColor
 {
-  margin-top: 1rem;
-  padding: 0.5rem 0rem;
-
+  background-color: red;
 }
 
+@media (min-width: 801px) {
+  .bannerImg {
+    width: 150px;
+    height: 150px;
+  }
+  #submitBtn {
+    width: 30%;
+  }
+  .input-Fields {
+    margin-left: 1rem;
+  }
+  .input-Fields input {
+    margin-top: 1rem;
+    padding: 0.5rem 0rem;
+  }
 }

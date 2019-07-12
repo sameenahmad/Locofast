@@ -80,20 +80,26 @@ class Newform extends Component {
     return (
       <div className="product-Form">
         <div className="product-Image">
+          <h4>Cover Image</h4>
           <img src={this.state.img} id="bannerImg" />
         </div>
         <div className="input-Fields">
-          <p id="errorMessage" style={{ color: "red", marginBottom: "1rem" }} />
-          <form>
+          <p
+            id="errorMessage"
+            style={{ color: "red", marginBottom: "0.5rem" }}
+          />
+          <form className="form">
             <label>Design Name*</label>
             <br />
             <input
               type="text"
               value={this.state.designName}
-              size="50"
               name="designName"
               onChange={this.handleChange}
+              required
+              maxlength="50"
             />
+            <p className="charsCount">{this.state.designName.length}/50</p>
             <br />
             <label>Design Id*</label>
             <br />
@@ -101,9 +107,11 @@ class Newform extends Component {
               type="text"
               value={this.state.designId}
               name="designId"
-              size="20"
               onChange={this.handleChange}
+              maxlength="30"
             />
+            <p className="charsCount">{this.state.designId.length}/30</p>
+
             <br />
             <label> Design Category*</label>
             <br />
@@ -111,10 +119,11 @@ class Newform extends Component {
               name="designCategory"
               onChange={this.handleChange}
               style={{
-                marginLeft: "1rem",
+                marginTop: "1rem",
                 backgroundColor: "white",
                 padding: "0.5rem 0.5rem"
               }}
+              required
             >
               <option value="Men">Men</option>
               <option value="Kids">Kids</option>I
@@ -124,6 +133,7 @@ class Newform extends Component {
             </select>
             <select
               name="designType"
+              required
               onChange={this.handleChange}
               style={{
                 marginLeft: "1rem",

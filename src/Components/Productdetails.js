@@ -1,20 +1,20 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Summary from "./Links/Summary";
-import Files from "./Links/Files";
-import Samplingdetails from "./Links/Samplingdetails";
+import people from "./Icons/people.svg";
 
 class Productdetail extends Component {
   constructor(props) {
     super(props);
   }
 
-  handClick = e => {
-    alert({ e });
-  };
   render() {
     return (
       <div className="productdetail-Container">
+        <img
+          src={people}
+          style={{ alignSelf: "flex-end", marginRight: "4rem" }}
+        />
+
         <p style={{ fontSize: "0.7rem" }}>
           Collections > Summer Collection 2019 >
         </p>
@@ -22,6 +22,7 @@ class Productdetail extends Component {
           <h4 style={{ marginTop: "0.5rem" }}>
             {this.props.item[0].designName}{" "}
           </h4>
+
           <p
             style={{
               fontSize: "0.7rem",
@@ -34,10 +35,12 @@ class Productdetail extends Component {
             {this.props.item[5].status}
           </p>
         </span>
+
         <span style={{ fontSize: "0.7rem", marginTop: "0.5rem" }}>
           {" "}
           by Utkarsha Arya June 15,2009 8:45pm
         </span>
+
         <ul
           style={{
             listStyle: "none",
@@ -49,7 +52,6 @@ class Productdetail extends Component {
         >
           <Link
             to="/summary"
-            onClick={this.handClick.bind("summary")}
             style={{ marginRight: "2rem", textDecoration: "none" }}
           >
             <li> DESIGN SUMMARY</li>
@@ -67,11 +69,6 @@ class Productdetail extends Component {
             <li> SAMPLING DETAILS</li>
           </Link>
         </ul>
-        {/* <Router>
-            <Route path='/summary' Component={Summary}></Route>
-            <Route path='/files' Component={Files}></Route>
-            <Route path='/summary' Component={Samplingdetails}></Route>
-        </Router>  */}
       </div>
     );
   }
