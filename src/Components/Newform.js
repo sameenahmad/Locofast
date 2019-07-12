@@ -16,6 +16,18 @@ class Newform extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    if (
+      (this.state.designName == "",
+      this.state.designId == "",
+      this.state.designType == "",
+      this.state.designCategory == "",
+      this.state.designType == "",
+      this.state.img == "")
+    ) {
+      const errorMessage = document.getElementById("errorMessage");
+      errorMessage.innerHTML = "Fields Can't be Empty";
+      return null;
+    }
     this.setState({
       designName: this.state.designName,
       designId: this.state.designId,
@@ -71,6 +83,7 @@ class Newform extends Component {
           <img src={this.state.img} id="bannerImg" />
         </div>
         <div className="input-Fields">
+          <p id="errorMessage" style={{color:'red', marginBottom:'1rem'}} />
           <form>
             <label>Design Name*</label>
             <br />
