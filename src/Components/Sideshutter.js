@@ -4,41 +4,21 @@ import add from "./Icons/add.svg";
 import Productdetails from "./Productdetails";
 import Collections from "./Links/Collections";
 import Designform from "./Designform";
+import ls from "local-storage";
+
 class Sideshutter extends Component {
   constructor(props) {
     super(props);
-
+    const getProducts = ls.get("products");
     this.state = {
-      products: [
-        {
-          designName: "GYPSY DRESS High low Corser Purple Boho Dress long",
-          designId: "MKB12345 ",
-          designCategory: "Women",
-          designType: "Western Wear",
-          status: "Sampling"
-        },
-        {
-          designName: "Brown Corduruoy Trowser",
-          designId: "MKB12346 ",
-          designCategory: "Women",
-          designType: "Western Wear",
-          status: "Sampling"
-        },
-        {
-          designName: "Purple Stripes Shirt",
-          designId: "MKB12347",
-          designCategory: "Men",
-          designType: "Western Wear",
-          status: "Draft"
-        }
-      ],
+      products: getProducts || [],
       showComponent: false,
       item: []
     };
   }
 
   handleClick = item => {
-    console.log("item in shutter", item);
+    console.log("Item was clicked", item);
     this.setState({ showComponent: true, item: item });
   };
   render() {
@@ -58,8 +38,8 @@ class Sideshutter extends Component {
             </li>
             {this.state.products.map(item => (
               <li onClick={this.handleClick.bind(this, item)}>
-                {item.designName}
-                <p>{item.status}</p>
+                {item[0].designName}
+                <p>{item[5].status}</p>
               </li>
             ))}
           </ul>
@@ -76,11 +56,11 @@ class Sideshutter extends Component {
               justifyContent: "space-between"
             }}
           >
-            Add new Design <img src={add} onClick={this.handleClick}/>
+            Add new Design <img src={add} onClick={this.handleClick} />
           </p>
         </div>
         {this.state.showComponent ? (
-          <div className="blah">
+          <div className="show-Product-Details">
             <Productdetails item={this.state.item} />
             <Designform item={this.state.item} />
           </div>

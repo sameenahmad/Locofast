@@ -19,9 +19,19 @@ class Productdetail extends Component {
           Collections > Summer Collection 2019 >
         </p>
         <span style={{ display: "flex", alignItems: "center" }}>
-          <h4 style={{ marginTop: "0.5rem" }}>{this.props.item.designName} </h4>
-          <p style={{ fontSize: "0.7rem", marginLeft: "1rem", backgroundColor:'#FFF1D2', borderRadius:'30%', padding:'0.2rem 0.2rem' }}>
-            {this.props.item.status}
+          <h4 style={{ marginTop: "0.5rem" }}>
+            {this.props.item[0].designName}{" "}
+          </h4>
+          <p
+            style={{
+              fontSize: "0.7rem",
+              marginLeft: "1rem",
+              backgroundColor: "#FFF1D2",
+              borderRadius: "30%",
+              padding: "0.2rem 0.2rem"
+            }}
+          >
+            {this.props.item[5].status}
           </p>
         </span>
         <span style={{ fontSize: "0.7rem", marginTop: "0.5rem" }}>

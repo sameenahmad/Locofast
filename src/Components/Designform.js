@@ -1,18 +1,21 @@
 import React, { Component } from "react";
+import ls from "local-storage";
 class Designform extends Component {
   constructor(props) {
     super(props);
+    const getProducts = ls.get("products");
     this.state = {
       designName: "",
       designId: "",
       designCategory: "",
       designType: "",
-      img: ""
+      img: [],
+      products: getProducts || []
     };
- 
   }
 
   handleSubmit = e => {
+    e.preventDefault();
     this.setState({
       designName: this.state.designName,
       designId: this.state.designId,
@@ -20,12 +23,35 @@ class Designform extends Component {
       designType: this.state.designType,
       img: this.state.img
     });
- 
+
+    const currentState = this.state.products;
+    const newStateProducts = [
+      ...currentState,
+      [
+        { designName: this.state.designName },
+        { designId: this.state.designId },
+        { designCategory: this.state.designCategory },
+        { designType: this.state.designType },
+        { img: this.state.img },
+        { status: "sampling" }
+      ]
+    ];
+    this.setState({ products: newStateProducts }, () =>
+      ls.set("products", this.state.products)
+    );
+
+    this.setState({
+      designName: "",
+      designId: "",
+      designCategory: "",
+      designType: "",
+      img: ""
+    });
+    window.location.reload();
   };
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
-    
   };
 
   onImageChange = event => {
@@ -43,6 +69,11 @@ class Designform extends Component {
       <div className="product-Form">
         <div className="product-Image">
           <img src={this.state.img} id="bannerImg" />
+          <img
+            src={this.props.item[4].img}
+            alt=""
+            style={this.props.item ? { display: "block" } : { display: "none" }}
+          />
         </div>
         <div className="input-Fields">
           <form>
@@ -50,7 +81,7 @@ class Designform extends Component {
             <br />
             <input
               type="text"
-              value={this.props.item.designName}
+              value={this.props.item[0].designName}
               size="50"
               name="designName"
               onChange={this.handleChange}
@@ -60,7 +91,7 @@ class Designform extends Component {
             <br />
             <input
               type="text"
-              placeholder={this.props.item.designId}
+              value={this.props.item[1].designId}
               name="designId"
               size="20"
               onChange={this.handleChange}
@@ -81,7 +112,7 @@ class Designform extends Component {
               <option value="Kids">Kids</option>I
               <option value="Women">Women</option>
               <option value="Decor">Decor</option>
-              <option defaultValue={this.props.item.designCategory} />
+              <option defaultValue={this.props.item[2].designCategory} />
             </select>
             <select
               name="designType"
@@ -97,7 +128,7 @@ class Designform extends Component {
               <option value="Ethnic">Ethnic</option>
               <option value="Footwear">Footwear</option>
               <option value="Watch">Watches and Wearables</option>
-              <option defaultValue={this.props.item.designType} />
+              <option defaultValue={this.props.item[3].designType} />
             </select>
             <input
               type="file"
