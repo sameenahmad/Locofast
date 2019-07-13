@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5492c175a917434c65be7edede3c0ab0",
+    "revision": "592d9cca8220a9150cc009f6cdb17f25",
     "url": "/Locofast/index.html"
   },
   {
-    "revision": "f89744cbeb311c6d83fe",
-    "url": "/Locofast/static/css/main.b8d9e34e.chunk.css"
+    "revision": "3f09d273ad6befa553f5",
+    "url": "/Locofast/static/css/main.659ee82d.chunk.css"
   },
   {
-    "revision": "10cc360c574156459d91",
-    "url": "/Locofast/static/js/2.76a6f6ae.chunk.js"
+    "revision": "9f8afcd80e24effdc57b",
+    "url": "/Locofast/static/js/2.d12dc18a.chunk.js"
   },
   {
-    "revision": "f89744cbeb311c6d83fe",
-    "url": "/Locofast/static/js/main.baf01742.chunk.js"
+    "revision": "3f09d273ad6befa553f5",
+    "url": "/Locofast/static/js/main.bac6cc5d.chunk.js"
   },
   {
     "revision": "8fb1dba3951869bb90e2",
@@ -38,6 +38,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e9eed4c5affcdc3c17a26a1505b1c86f",
     "url": "/Locofast/static/media/messages.e9eed4c5.svg"
+  },
+  {
+    "revision": "13aca94c611ccf06ca403259142e3812",
+    "url": "/Locofast/static/media/people.13aca94c.svg"
   },
   {
     "revision": "a06833fdc118fc5b40bec6d821135333",
