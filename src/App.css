@@ -201,8 +201,7 @@
 .input-Fields {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    min-height: 50vh;
+    min-height: 60vh;
     width: 50%;
     padding-top: 1.5rem;
     padding-left: 0.5rem;

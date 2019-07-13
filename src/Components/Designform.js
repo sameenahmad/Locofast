@@ -128,20 +128,10 @@ class Designform extends Component {
               <option value="Watch">Watches and Wearables</option>
               <option defaultValue={this.props.item[3].designType} />
             </select>
-            <input
-              type="file"
-              onChange={this.onImageChange}
-              className="filetype"
-              id="group_image"
-            />
+            
 
             <br />
-            <input
-              type="submit"
-              value="Add design"
-              id="submitBtn"
-              onClick={this.handleSubmit}
-            />
+            
           </form>
         </div>
       </div>
