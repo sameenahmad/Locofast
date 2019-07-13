@@ -1,16 +1,13 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import people from "./Icons/people.svg";
 
 class Productdetail extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className="productdetail-Container">
         <img
+          alt="people "
           src={people}
           style={{ alignSelf: "flex-end", marginRight: "4rem" }}
         />

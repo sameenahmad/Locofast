@@ -15,15 +15,24 @@ class Sideshutter extends Component {
       showComponent: false,
       showNewForm: true,
       item: [],
+      activeItemIndex: null,
       getColor: false
     };
   }
 
-  handleClick = item => {
-    this.setState({ showComponent: true, showNewForm: false, item: item });
+  handleClick = (item, index) => {
+    this.setState({
+      showComponent: true,
+      showNewForm: false,
+      item: item,
+      activeItemIndex: index
+    });
   };
   addDesign = e => {
     this.setState({ showNewForm: true, showComponent: false });
+  };
+  isActive = e => {
+    console.log("TCL: Sideshutter -> isActive -> e", e);
   };
 
   render() {
@@ -41,9 +50,15 @@ class Sideshutter extends Component {
               <img src={arrow} style={{ marginRight: "1rem" }} />
               All Designs
             </li>
-            {this.state.products.map(item => (
-              <li onClick={this.handleClick.bind(this, item)}>
-                {item[0].designName}
+            {this.state.products.map((item, index) => (
+              <li
+                key={index}
+                onClick={this.handleClick.bind(this, item, index)}
+                style={{
+                  backgroundColor: this.state.activeItemIndex === index ? "#D4EEFD" : ""
+                }}
+              >
+                <p> {item[0].designName}</p>
                 <p>{item[5].status}</p>
               </li>
             ))}

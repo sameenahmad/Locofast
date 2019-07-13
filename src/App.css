@@ -1,242 +1,278 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  color: black;
-  font-family: "Nunito";
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: black;
+    font-family: "Nunito";
 }
+
 .app {
-  display: flex;
-  min-height: 100vh;
-  background-color: white;
+    display: flex;
+    min-height: 100vh;
+    background-color: white;
 }
+
 .sidebar-Container {
-  display: flex;
-  width: 8%;
-  background-color: #0177bd;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 100vh;
-  padding-left: 0.2rem;
-  padding-right: 0.2rem;
+    display: flex;
+    width: 8%;
+    background-color: #0177bd;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
 }
+
 .sidebar-List {
-  list-style: none;
-  font-family: "Nunito";
-  font-size: 0.6rem;
-  margin-top: 0.2rem;
-  align-items: center;
+    list-style: none;
+    font-family: "Nunito";
+    font-size: 0.6rem;
+    margin-top: 0.2rem;
+    align-items: center;
 }
+
 .sidebar-List li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 1.5rem;
-  color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+    color: white;
 }
+
 .sidebar-List li p {
-  margin-top: 0.3rem;
-  color: white;
+    margin-top: 0.3rem;
+    color: white;
 }
+
 .sidebar-List li img {
-  width: 30px;
-  height: 30px;
+    width: 30px;
+    height: 30px;
 }
+
 .sidebar-List :hover {
-  color: white;
+    color: white;
 }
+
 .right-Screen-Container {
-  display: flex;
-  flex-direction: column;
-  width: 92%;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    min-height: 100vh;
 }
+
 .header {
-  display: flex;
-  width: 100%;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid lightgray;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 1px 1px 25px #888888;
+    display: flex;
+    width: 100%;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid lightgray;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 1px 25px #888888;
 }
 
 .search-Container {
-  display: flex;
-  width: 55%;
-  margin-left: 2rem;
-  margin-top: 0.5rem;
-  align-items: center;
+    display: flex;
+    width: 55%;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    align-items: center;
 }
+
 .searchBar {
-  margin-left: 2rem;
-  width: 350px;
-  height: 40px;
-  padding-left: 0.5rem;
-  border: none;
-  background-color: #efeff0;
-  border-radius: 2%;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  outline: none;
+    margin-left: 2rem;
+    width: 350px;
+    height: 40px;
+    padding-left: 0.5rem;
+    border: none;
+    background-color: #efeff0;
+    border-radius: 2%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    outline: none;
 }
+
 .searchBtn {
-  background-color: #efeff0;
-  border: none;
-  outline: none;
-  height: 40px;
-  padding-right: 1rem;
-  border-radius: 15%;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+    background-color: #efeff0;
+    border: none;
+    outline: none;
+    height: 40px;
+    padding-right: 1rem;
+    border-radius: 15%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
+
 .productdetail-Container {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  padding-top: 1rem;
-  padding-left: 2rem;
-  background-color: white;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    background-color: white;
 }
+
 .shutter-Container {
-  display: flex;
-  width: 100%;
-  min-height: 100vh;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
 }
+
 .shutter {
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  min-height: 100vh;
-  justify-content: space-between;
-  align-items: center;
-  border-right: 2px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    min-height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    border-right: 2px solid lightgray;
 }
+
 .product-Detail-List {
-  list-style: none;
+    list-style: none;
 }
+
 .product-Detail-List li {
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid lightgray;
-  padding: 1rem 1rem;
-  font-family: "Nunito";
-  font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid lightgray;
+    padding: 1rem 1rem;
+    font-family: "Nunito";
+    font-size: 0.8rem;
+}
+/* 
+.product-Detail-List li:hover {
+    color: #397fdb;
+} */
+
+.product-Detail-List li {
+    color: black;
+    font-family: "Nunito";
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
 }
 
 .product-Detail-List li p {
-  color: #a3b8d4;
-  font-family: "Nunito";
-  font-size: 0.7rem;
-  margin-top: 0.5rem;
+    color: inherit;
+    margin-top: 0.5rem;
 }
+
 #product-Summary-Container {
-  display: flex;
-  min-height: 100vh;
-  width: 100%;
-  flex: 1;
-  background-color: blue;
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    flex: 1;
+    background-color: blue;
 }
+
 #product-description {
-  display: flex;
-  width: 100%;
-  min-height: 100vh;
-  flex-direction: column;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
 }
+
 .productdetail-Container ul li:hover {
-  font-weight: bold;
-  border-bottom: 2px solid #0065b8;
+    font-weight: bold;
+    border-bottom: 2px solid #0065b8;
 }
 
 .product-Form {
-  display: flex;
-  margin-top: 2rem;
-  min-height: 50vh;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-bottom: 4rem;
-  border: 2px solid lightgray;
-  border-radius: 2%;
-  background-color: white;
+    display: flex;
+    margin-top: 2rem;
+    min-height: 50vh;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 4rem;
+    border: 2px solid lightgray;
+    border-radius: 2%;
+    background-color: white;
 }
-.show-Product-Details {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  background-color: #f5f5f5;
-}
-.input-Fields {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  min-height: 50vh;
-  width: 50%;
-  padding-top: 1.5rem;
-  padding-left: 0.5rem;
-  font-family: "Nunito";
-  font-size: 0.8rem;
-  color: #c1c1c4;
-  padding-bottom: 2rem;
-  margin-left: 1rem;
 
+.show-Product-Details {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background-color: #f5f5f5;
+}
+
+.input-Fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 50vh;
+    width: 50%;
+    padding-top: 1.5rem;
+    padding-left: 0.5rem;
+    font-family: "Nunito";
+    font-size: 0.8rem;
+    color: #c1c1c4;
+    padding-bottom: 2rem;
+    margin-left: 1rem;
 }
 
 .product-Image {
-  display: flex;
-  flex-direction: column;
-  min-height: 50vh;
-  width: 40%;
-  padding-top: 2rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+    width: 40%;
+    padding-top: 2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    align-items: center;
 }
-.input-Fields input {
-  width: 80%;
-  padding: 0.5rem 0rem;
-}
-.input-Fields label {
-  color: #c1c1c4;
-  margin-top: 0.5rem;
 
+.input-Fields input {
+    width: 80%;
+    padding: 0.5rem 0rem;
 }
+
+.input-Fields label {
+    color: #c1c1c4;
+    margin-top: 0.5rem;
+}
+
 #submitBtn {
-  width: 20%;
-  padding: 0.2rem 0.2rem;
+    width: 20%;
+    padding: 0.2rem 0.2rem;
 }
+
 .bannerImg {
-  display: block;
-  width: 300px;
-  height: 300px;
+    display: block;
+    width: 300px;
+    height: 300px;
 }
 
 .charsCount {
-  display: flex;
-  width: 80%;
-  justify-content: flex-end;
-  color: #c1c1c4;
-  font-size: 0.6rem;
+    display: flex;
+    width: 80%;
+    justify-content: flex-end;
+    color: #c1c1c4;
+    font-size: 0.6rem;
 }
-.getColor
-{
-  background-color: red;
+
+.getColor {
+    background-color: red;
 }
 
 @media (min-width: 801px) {
-  .bannerImg {
-    width: 150px;
-    height: 150px;
-  }
-  #submitBtn {
-    width: 30%;
-  }
-  .input-Fields {
-    margin-left: 1rem;
-  }
-  .input-Fields input {
-    margin-top: 1rem;
-    padding: 0.5rem 0rem;
-  }
+    .bannerImg {
+        width: 150px;
+        height: 150px;
+    }
+
+    #submitBtn {
+        width: 30%;
+    }
+
+    .input-Fields {
+        margin-left: 1rem;
+    }
+
+    .input-Fields input {
+        margin-top: 1rem;
+        padding: 0.5rem 0rem;
+    }
 }

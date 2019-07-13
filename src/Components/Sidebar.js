@@ -62,8 +62,6 @@ const routes = [
   }
 ];
 
-
-
 function Sidebar() {
   return (
     <Router>
@@ -82,7 +80,6 @@ function Sidebar() {
           <Link
             style={{ textDecoration: "none", color: "#6e7880" }}
             to="/collections"
-            activeClassName="active"
           >
             {" "}
             <li>
@@ -93,7 +90,7 @@ function Sidebar() {
 
           <NavLink
             style={{ textDecoration: "none", color: "#6e7880" }}
-             to="/sampling"
+            to="/sampling"
           >
             {" "}
             <li>
@@ -141,6 +138,7 @@ function Sidebar() {
       </div>
       {routes.map((route, index) => (
         <Route
+          key={index}
           path={route.path}
           exact={route.exact}
           component={route.sidebar}

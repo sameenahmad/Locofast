@@ -17,12 +17,12 @@ class Newform extends Component {
   handleSubmit = e => {
     e.preventDefault();
     if (
-      (this.state.designName == "",
-      this.state.designId == "",
-      this.state.designType == "",
-      this.state.designCategory == "",
-      this.state.designType == "",
-      this.state.img == "")
+      (this.state.designName === "",
+      this.state.designId === "",
+      this.state.designType === "",
+      this.state.designCategory === "",
+      this.state.designType === "",
+      this.state.img === "")
     ) {
       const errorMessage = document.getElementById("errorMessage");
       errorMessage.innerHTML = "Fields Can't be Empty";
@@ -97,7 +97,7 @@ class Newform extends Component {
               name="designName"
               onChange={this.handleChange}
               required
-              maxlength="50"
+              maxLength="50"
             />
             <p className="charsCount">{this.state.designName.length}/50</p>
             <br />
@@ -108,7 +108,7 @@ class Newform extends Component {
               value={this.state.designId}
               name="designId"
               onChange={this.handleChange}
-              maxlength="30"
+              maxLength="30"
             />
             <p className="charsCount">{this.state.designId.length}/30</p>
 

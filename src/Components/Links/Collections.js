@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import Header from "../Header";
-import Productdetails from "../Productdetails";
 import Sideshutter from "../Sideshutter";
-import Designform from "../Designform";
 class Collections extends Component {
   state = {};
   render() {
